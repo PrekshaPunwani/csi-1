@@ -103,6 +103,7 @@ Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('/dashboard', ['middleware'=>'auth', 'uses'=>'UserDashboardController@index']);	
 
 Route::get('/profile', ['middleware'=>'auth', 'as' => 'profile', 'uses'=>'UserDashboardController@showProfile']);
+Route::get('/createEvent', ['middleware'=>'auth', 'as' => 'createEvent', 'uses'=>'UserDashboardController@createEvent']);
 Route::get('/confirmStudentBranch', ['middleware'=> ['auth', 'isacademic'], 'as' => 'confirmStudentBranch', 'uses'=>'UserDashboardController@confirmStudentBranch']);
 Route::post('/makeStudentBranch', ['middleware'=> ['auth', 'isacademic'], 'uses'=>'UserDashboardController@makeStudentBranch']);
 Route::get('/card', ['middleware'=>'auth.individual', 'as' => 'card', 'uses'=>'UserDashboardController@showCard']);
