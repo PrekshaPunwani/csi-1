@@ -159,8 +159,4 @@ class UserDashboardController extends Controller
     {
         //
     }
-
-    public function createEvent(){
-    return view('frontend.events.create-event');
-    }
 }
